@@ -12,6 +12,16 @@ export class DropdownMenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  toggle:boolean = true;
+
+  selectedItem?:Item;
+
+
+  onSelect(item:Item): void {
+    this.selectedItem = item;
+
+    this.toggle = !this.toggle;
+  }
 
   /*déclaration de la listes des items*/
   item1 = new Item(1, "Fruits");

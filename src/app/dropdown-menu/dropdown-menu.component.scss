@@ -65,16 +65,20 @@
   fill: #ffffff;
 }
 
-#checked {
+.unchecked {
   position: absolute;
   height: 20px;
   width: 25px;
   fill: transparent;
+
+}
+
+.checked {
+  position: absolute;
+  fill: #ffffff;
   right: 10px;
   margin-right: 0.3rem;
   margin-left: auto;
-}
-
-#checked:focus {
-  fill: #ffffff;
+  height: 20px;
+  width: 25px;
 }
