@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DropdownMenuComponent } from './dropdown-menu.component';
 
-describe('DropdownMenuComponent', () => {
+describe('ContentComponent', () => {
   let component: DropdownMenuComponent;
   let fixture: ComponentFixture<DropdownMenuComponent>;
 

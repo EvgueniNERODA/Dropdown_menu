@@ -6,15 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
-import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    DropdownMenuComponent,
-    ContentComponent
+    DropdownMenuComponent
   ],
   imports: [
     BrowserModule,

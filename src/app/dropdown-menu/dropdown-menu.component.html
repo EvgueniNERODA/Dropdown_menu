@@ -1,18 +1,23 @@
+<div class="content-body">
+  <button class="dropdown-btn"  (click)="openMenu($event)">{{buttonValue}}</button>
 
-<div class="dropdown-wrapper">
-  <div class="triangle"></div>
-    <div class="dropdown-content">
-      <div class="dropdown-menu" >
 
-        <a href="#" class="filter-btn" *ngFor="let item of listItems" (click)="onSelect(item)" >
-          {{item.name}}
-          <svg [class.checked]="item === selectedItem" class="unchecked" x="0px" y="0px" viewBox="0 0 288.941 288.941" style="enable-background:new 0 0 288.941 288.941;" xml:space="preserve">
-            <g>
+    <div class="dropdown-wrapper"  *ngIf="isMenuOpen">
+      <div class="triangle"></div>
+      <div class="dropdown-content">
+        <div class="dropdown-menu" >
+
+          <a href="#" class="filter-btn" *ngFor="let item of listItems" (click)="onSelect(item)" [class.selected]="item == this.selectedItem && !selected">
+            {{item.name}}
+            <svg  [class.checked]="item == this.selectedItem" *ngIf="!selected" class="unchecked" x="0px" y="0px" viewBox="0 0 288.941 288.941" style="enable-background:new 0 0 288.941 288.941;" xml:space="preserve">
+            <g >
               <path  d="M285.377,46.368c-4.74-4.704-12.439-4.704-17.179,0L96.309,217.114L20.734,142.61   c-4.74-4.704-12.439-4.704-17.179,0s-4.74,12.319,0,17.011l84.2,82.997c4.692,4.644,12.499,4.644,17.191,0l180.43-179.239   C290.129,58.687,290.129,51.06,285.377,46.368C280.637,41.664,290.129,51.06,285.377,46.368z"/>
             </g>
           </svg>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
+
 </div>
 
